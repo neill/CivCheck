@@ -1,0 +1,11 @@
+<div id="id-div">
+    <%= form_for(@group) do |f| %>
+        <%= f.text_field :steamid_name, name: 'steamid_arr[0]', class: 'form-control', placeholder: "Steam Name"  %>
+        <%= f.text_field :steamid_name, name: 'steamid_arr[1]', class: 'form-control', placeholder: "Steam Name"  %>
+        <%= f.text_field :steamid_name, name: 'steamid_arr[2]', class: 'form-control', placeholder: "Steam Name"  %>
+
+    <span id="add-id-row" class="glyphicon glyphicon-plus"></span>
+    <br>
+    <p class="text-center"><%= f.submit class: "btn btn-primary btn-lg", value: "Check!" %></p>
+    <% end %>
+</div>
