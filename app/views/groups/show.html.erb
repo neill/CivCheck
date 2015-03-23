@@ -1,9 +1,29 @@
 <div class="container">
-  <div class="starter-template">
-        <ul>
+  <div class="starter-template pull-left">
+        <ul class="">
             <% @players.each do |key, array| %>
-            <li><%= array[:personaname] %> (<%= key %>) || <%= array[:gamelist].select { |x| x["appid"] == 8930 } ? "Has Civ5!" : nil  %></li>
+            <li><div class="player"><img class="avatar" src='<%= array[:avatarurl] %>'><strong><%= array[:personaname] %></strong> (<%= key %>)</div><%= image_tag "gnk_logo.jpg", class: '#{_class}' %><%= image_tag "bnw_logo.jpg", class: '#{_class}' %><%= image_tag "scram_logo.jpg" class: '#{_class}' %><%= image_tag "scram_n_logo.jpg" class: '#{_class}' %><%= image_tag "baby_logo.jpg" class: '#{_class}' %><br><%= image_tag "med_logo.jpg" class: '#{_class}' %><%= image_tag "asia_logo.jpg" class: '#{_class}' %><%= image_tag "amer_logo.jpg" class: '#{_class}' %><%= image_tag "meso_logo.jpg" class: '#{_class}' %><%= image_tag "spain_logo.jpg" class: '#{_class}' %><br><%= image_tag "poly_logo.jpg" class: '#{_class}' %><%= image_tag "den_logo.jpg" class: '#{_class}' %><%= image_tag "expl_logo.jpg" class: '#{_class}' %><%= image_tag "scen_logo.jpg" class: '#{_class}' %><%= image_tag "kor_logo.jpg" class: '#{_class}' %></li><br>
             <% end %>
         </ul>
   </div>
 </div>
+
+GAME LISTING:
+8930 = CIV
+235580 = BNW
+16870 = GNK
+235584 = SCRAM
+235585 = SCRAM_N
+16868 = BABY
+16860 = MED
+16861 = ASIA
+16862 = AMER
+16863 = MESO
+16867 = SPAIN
+99610 = POLY
+99611 = DEN
+16866 = EXPL
+99614 = SCEN
+99612 = KOR
+
+special sauce: array[:gamelist].select { |x| x["appid"] == 8930 } ? "Has Civ5!" : nil

@@ -43,6 +43,33 @@ span.glyphicon-plus {
     line-height: 25px;
 }
 
+ul {
+  width: inherit;
+}
 li {
+  padding-bottom: 5px;
   list-style-type: none;
+  float: left;
+}
+
+.avatar {
+  height: 32px;
+  width: 32px;
+  margin-right: 5px;
+}
+
+.player {
+  background-color: rgba(108,192,229, 0.5);
+  width: 155px;
+  height: 162px;
+  float: left;
+  padding-right: 5px;
+}
+
+.full {
+  opacity: 1;
+}
+
+.dim {
+  opacity: .4;
 }
