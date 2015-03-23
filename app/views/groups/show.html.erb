@@ -1,1 +1,9 @@
-<p><%= @group.steamid_name %></p>
+<div class="container">
+  <div class="starter-template">
+        <ul>
+            <% @players.each do |key, array| %>
+            <li><%= array[:personaname] %> (<%= key %>) || <%= array[:gamelist].select { |x| x["appid"] == 8930 } ? "Has Civ5!" : nil  %></li>
+            <% end %>
+        </ul>
+  </div>
+</div>
